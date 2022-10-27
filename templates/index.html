@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+        body {
+          background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .content {
+          max-width: 500px;
+          margin: auto;
+          background: white;
+          padding: 10px;
+        }
+    </style>
+<head>
+    <title>Search Youtube</title>
+</head>
+    <div>
+        <h1>Input your favorite programming language</h1>
+        <h2>     Java, Javascript or Python</h2>
+    </div>
+<body>
+    <form method="POST" style="background-color: yellow;height: 400px;width: 560px;">
+        <br>
+        Lang : <input type="text" name="language">
+        search query: <input type="text" name="search_query" required>
+        <br>
+        <input type="submit" method="POST" name="action" value="Search"> 
+        <br>
+        <br>       
+        {{result}}
+    </form>
+</body>
+</html>
