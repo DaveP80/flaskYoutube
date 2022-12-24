@@ -37,7 +37,7 @@ def home():
         list_results4 = []
         urltemplate = "https://www.youtube.com/watch?v="
 
-        regexquery = re.compile("(watchEndpoint\":{\"videoId\":\")\w+")
+        regexquery = re.compile("(watchEndpoint\":{\"videoId\":\").{11}")
 
         for var in re.finditer(regexquery, response.text):
             list_results.append(var.group()[-11:])
